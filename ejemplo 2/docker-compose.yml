@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  server:
+    container_name: server
+    image: server
+    #build: ../ejemplo 1/server
+    restart: always 
+    networks:
+      - curso2
+    ports:
+      - 49000:49000
+    #entrypoint: python3 server.py 49000
+  
+  client:
+    container_name: client
+    image: client
+    restart: always 
+    networks:
+      - curso2
+    ports:
+      - 45000:45000
+    #entrypoint: python3 client.py 45000
+
+networks:
+  # Network overlay
+  curso2:
+    attachable: true

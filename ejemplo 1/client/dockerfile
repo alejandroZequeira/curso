@@ -1,0 +1,8 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY app/client.py .
+COPY app/mensaje.txt .
+#RUN pip install socket
+
+# Ejecuta el cliente cuando se inicie el contenedor
+CMD ["python","client.py"]
