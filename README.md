@@ -6,7 +6,7 @@ Este documento proporciona ejemplos básicos para manejar redes, volúmenes y de
 
 ### Crear una red:
 ```bash
-docker network create -d bridge <name_network> --subnet=10.0.0.1/25
+docker network create -d bridge <name_network> 
 ```
 ### Para listar redes:
 ```bash
@@ -45,7 +45,14 @@ docker  volume rm <volumen_name>
 ```
 
 ## 3.-Ejemplo de despliegue de imágenes de contendor.
-
+### Crear una imagen de contenedor:
+```bash
+docker build -t  <image_name> .
+```
+o 
+```bash
+docker build -t  <image_name> -f <file path>
+```
 ### Crear y ejecutar un contenedor:
 ```bash
 docker run -d --name <container_name> <image_name>
