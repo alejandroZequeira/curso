@@ -13,7 +13,7 @@ def server(port):
             nombre_archivo = cliente.recv(1024).decode()
             print(f"conexion desde:{direccion}")
             print("Recibiendo archivo:", nombre_archivo)
-            cliente.sendall("archivo recibido")
+            cliente.sendall("archivo recibido".encode("utf-8"))
             cliente.close()
 
 

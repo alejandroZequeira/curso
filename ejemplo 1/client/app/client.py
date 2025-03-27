@@ -14,4 +14,4 @@ def client(host,port,nombre_archivo):
 
    
 if __name__ == "__main__":
-    client("servidor_tec",49000,"mensaje.txt")
+    client("servidor_tec",49000,"documetos/mensaje.txt")
