@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title %} Tec {% endblock %} {% block head %} {{ super() 
+}}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+{% endblock %} {% block content %}
+<section>
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="row"> 
+                <div>
+                </div>
+                <div style="margin:auto">
+                    <h1>TEC</h1>
+                    <p>TEC is a web application that allows you to create and visualize flowcharts. It is a tool that can be used to create flowcharts for different purposes, such as planning a project, organizing information, or visualizing a process. TEC is designed to be easy to use and flexible, so you can create flowcharts that meet your specific needs.</p>
+                    <a href="/visualize" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block footer %} {{ super() }}
+
+{% endblock %}

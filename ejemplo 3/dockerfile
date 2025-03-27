@@ -1,0 +1,5 @@
+FROM fbalderasd/python:3.7-sb
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python3", "app/run.py","45000"]
