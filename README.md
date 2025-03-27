@@ -47,10 +47,12 @@ docker  volume rm <volumen_name>
 ## 3.-Ejemplo de despliegue de imágenes de contendor.
 ### Crear una imagen de contenedor:
 ```bash
+- estando dentro de la carpeta donde se encuentra el dockerfile
 docker build -t  <image_name> .
 ```
 o 
 ```bash
+- estando fuera de la carpeta donde se encuentra el dockerfile
 docker build -t  <image_name> -f <file path>
 ```
 ### Crear y ejecutar un contenedor:
@@ -204,4 +206,12 @@ Ejemplo: memory: "256M" (256 MB).
 ```bash
 - reservations: Permite reservar una cantidad mínima de recursos para un servicio.
 Ejemplo: cpus: "0.25" y memory: "128M".
+```
+# comandos para el ejemplo 3
+nota: es importante estar dentro de la carpeta "ejemplo 3"
+```bash
+- para construir la imagen de contenedor 
+docker build -t pagina .
+- una vez creada la imagen de contenedor
+docker run -p 45001:45000 --network my_network --name pagina pagina 
 ```
